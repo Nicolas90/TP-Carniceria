@@ -5,6 +5,9 @@ function validarLogin()
 	var recordar=$("#recordarme").is(':checked');
 //$("#sidebar").html("<img src='imagenes/ajax-loader.gif' style='width: 30px;'/>");
 	
+	alert(varEmail);
+	alert(varClave);
+
 	var funcionAjax=$.ajax({
 		url:"php/validarUsuario.php",
 		type:"post",
@@ -18,9 +21,11 @@ function validarLogin()
 	{
 		if(retorno.trim()=="ingreso")
 		{
+			$("#BotonLogin").html("Salir de Sesion");
+			$("#BotonLogin").addClass("btn btn-danger");	
 			Mostrar('acciones');
 		}
-        else
+        else	// if(retorno.trim()=="no registrado")
         {
 			MostarLogin();
         }
@@ -40,6 +45,8 @@ function deslogear()
 	});
 	funcionAjax.done(function(retorno)
 	{
-			MostarLogin();
+		$("#BotonLogin").html("Ingreso");
+		$("#BotonLogin").addClass("btn btn-primary");
+		MostarLogin();
 	});	
 }

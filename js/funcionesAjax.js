@@ -1,5 +1,7 @@
 function MostarLogin()
 {
+	//alert("hello");
+
 	var funcionAjax=$.ajax({
 		url:"nexo.php",
 		type:"post",

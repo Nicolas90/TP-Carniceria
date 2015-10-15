@@ -1,6 +1,7 @@
 <?php 
 require_once("clases/AccesoDatos.php");
 require_once("clases/pedido.php");
+require_once("clases/usuario.php");
 $queHago=$_POST['queHacer'];
 
 switch ($queHago) {
@@ -17,12 +18,12 @@ switch ($queHago) {
 
 
 	case 'MostrarPedidos':
-			include("partes/formPedidosUsuario.php");
-		break;
+		include("partes/formMostrarPedidos.php");
+	break;
 	
-	case 'AltaPedidos':
-			include("partes/formAltaPedidos.php");
-		break;
+	case 'GenerarPedido':
+		include("partes/formGenerarPedido.php");
+	break;
 
 
 

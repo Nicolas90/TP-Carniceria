@@ -43,9 +43,9 @@
 
 		<nav>
 			<ul id="main-nav" class="clearfix">
-				<li><a onclick="MostarLogin()" class="btn">Ingreso</a></li>
-				<li><a onclick="Mostrar('votacion')" class="btn">Generar Pedido</a> </li>
-				<li><a onclick="Mostrar('MostrarGrilla')" class="btn">Sus pedidos</a> </li>
+				<li><a onclick="MostarLogin()" class="btn btn-primary" id="BotonLogin">Ingreso</a></li>
+				<li><a onclick="Mostrar('GenerarPedido')" class="btn">Generar Pedido</a> </li>
+				<li><a onclick="Mostrar('MostrarPedidos')" class="btn">Sus pedidos</a> </li>
 				
 			</ul>
 			<!-- /#main-nav --> 
